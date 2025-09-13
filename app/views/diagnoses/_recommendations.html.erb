@@ -1,0 +1,46 @@
+<% rec = recommendations_for(@diagnosis) %>
+
+<div class="recommendations">
+  <hr>
+  <h5>宮城のおすすめリンク</h5>
+
+  <p class="mb-2">
+    迷ったらまずは下の「MAPで探す（β）」へ。ショップ・練習・コースを地図で見られる②のページに遷移します。
+  </p>
+  <p>
+    <%= link_to "宮城ゴルフMAPで探す（β）", miyagi_map_path, class: "btn btn-primary" %>
+  </p>
+
+  <h6 class="mt-4">ショップ（実店舗）</h6>
+  <ul>
+    <% rec[:shops].each do |s| %>
+      <li>
+        <%= link_to s[:name], s[:url], target: "_blank", rel: "noopener" %>
+        <% if s[:note].present? %>— <span class="text-muted"><%= s[:note] %></span><% end %>
+      </li>
+    <% end %>
+    <% if rec[:indoor].present? %>
+      <li class="mt-2"><strong>（個室・インドア）</strong></li>
+      <% rec[:indoor].each do |s| %>
+        <li>
+          <%= link_to s[:name], s[:url], target: "_blank", rel: "noopener" %>
+          <% if s[:note].present? %>— <span class="text-muted"><%= s[:note] %></span><% end %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+
+  <h6 class="mt-4">ゴルフ場（宮城県）</h6>
+  <ul>
+    <% rec[:courses].each do |c| %>
+      <li><%= link_to c[:name], c[:url], target: "_blank", rel: "noopener" %> <% if c[:note] %><span class="text-muted">— <%= c[:note] %></span><% end %></li>
+    <% end %>
+  </ul>
+
+  <h6 class="mt-4">オンラインでまず揃える</h6>
+  <ul>
+    <% rec[:online].each do |o| %>
+      <li><%= link_to o[:name], o[:url], target: "_blank", rel: "noopener" %></li>
+    <% end %>
+  </ul>
+</div>

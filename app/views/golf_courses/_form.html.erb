@@ -1,0 +1,42 @@
+<%= form_with(model: golf_course) do |form| %>
+  <% if golf_course.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(golf_course.errors.count, "error") %> prohibited this golf_course from being saved:</h2>
+
+      <ul>
+        <% golf_course.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :area, style: "display: block" %>
+    <%= form.text_field :area %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :image_url, style: "display: block" %>
+    <%= form.text_field :image_url %>
+  </div>
+
+  <div>
+    <%= form.label :official_url, style: "display: block" %>
+    <%= form.text_field :official_url %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

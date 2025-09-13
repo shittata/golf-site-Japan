@@ -1,0 +1,788 @@
+<div class="intoro">
+  <h5>診断結果</h5>
+  <p>あなたにおすすめのゴルフスタイルと、具体的なアクションプランはこちらです。</p>
+</div>
+
+<div class="diagnosis-container">
+ <% case [@diagnosis.question1, @diagnosis.question2, @diagnosis.question3, @diagnosis.question4, @diagnosis.question5] %>
+  <% when ["1", "1", "1", "1", "1"] %>
+    <h6>「青空の下のおしゃれさん」カジュアル・ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    開放的な練習場で気持ちよく練習し、コースではファッションリーダーを目指すタイプ。手頃な価格で、機能性よりも見た目のおしゃれを優先して、仲間とのゴルフライフを彩ります。</p>
+    <p><b>今後の成長パス：</b><br>
+    普段着感覚でおしゃれを楽しみながら、打ちっぱなしで基礎を固める。ファッションからゴルフの楽しさを広げていきましょう。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>まずは中古ショップの雄、ゴルフパートナーへ。経験豊富なスタッフに「楽しくおしゃれに始めたい」と伝えれば、予算内でぴったりの優しいセットを提案してくれます。<br>
+          <%= link_to "ゴルフパートナー 仙台泉バイパス店", "https://www.golfpartner.co.jp/538/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>アウトレットモールは、有名ブランドのゴルフウェアがお得に手に入る宝の山です。自分だけのコーディネートを探しに行きましょう。<br>
+          <%= link_to "仙台泉プレミアム・アウトレット", "https://www.premiumoutlets.co.jp/sendaiizumi/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>開放感のある打ちっぱなしで、青空に向かってボールを打つ爽快感を味わいましょう。難しいことは考えず、まずは楽しむことが一番です。<br>
+          <%= link_to "宮城ゴルフガーデン ", "http://www.miyagigolf.co.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>仲間との会話や写真撮影も楽しめる、景観が良くフェアウェイが広いコースがおすすめです。<br>
+          <%= link_to "松島国際カントリークラブ", "https://matsushima-kokusai-cc.co.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+    
+  <% when ["1", "1", "1", "1", "2"] %>
+    <h6>「開放的に楽しむ」アクティブ・ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    青空の下、開放的な練習場で思いっきりボールを打ちたいタイプ。仲間との楽しいプレーが一番の目的で、易しいクラブと機能的な服装で、アクティブにゴルフを楽しみます。</p>
+    <p><b>今後の成長パス：</b><br>
+    打ちっぱなしで爽快に練習し、仲間と楽しくラウンド。ゴルフの開放感を存分に味わいます。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>大型スポーツ量販店なら、様々なメーカーの初心者向けセットを実際に見て触って選べます。専門スタッフに相談してみましょう。<br>
+          <%= link_to "ゴルフ５ 仙台泉店", "https://store.alpen-group.jp/Form/RealShop/ShopDetail.aspx?rsid=0658&srsltid=AfmBOorBda6cN72Y1f4Nd-TJAuEEu2zQn7viFfD9VBKJU7bjmavASpxk", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>動きやすさとコスパで選ぶならワークマン。ゴルフ専用でなくても、ストレッチ性の高いパンツやポロシャツは十分使えます。<br>
+          <%= link_to "ワークマン (公式オンラインストア)", "https://workman.jp/shop/default.aspx", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>距離が長く、広々とした練習場で思いっきりドライバーを振りましょう。ボールの弾道を目で追うだけでも楽しめます。<br>
+          <%= link_to "泉パークタウンゴルフ練習場", "https://ipgr.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>気軽にプレーできるパブリックコースが最適。仲間とわいわい楽しむことを最優先にコースを選びましょう。<br>
+          <%= link_to "杜の公園ゴルフクラブ", "https://www.mori-golf.co.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["1", "1", "1", "2", "1"] %>
+    <h6>「こだわりギアとファッション」両立ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    オープンな環境で、こだわりのギアとファッションの両方を楽しみたいタイプ。手頃な価格の中で、自分だけの最高の組み合わせを見つけることに情熱を燃やします。</p>
+    <p><b>今後の成長パス：</b><br>
+    中古クラブとセールウェアで理想の組み合わせを見つけ、打ちっぱなしで伸び伸び練習。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>中古ショップで少し前のモデル（型落ち）を探すと、低価格で高性能な「名器」に出会える可能性があります。<br>
+          <%= link_to "ゴルフパートナー 仙台泉バイパス店", "https://www.golfpartner.co.jp/538/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>アウトレットやセール時期を狙って、憧れブランドのウェアを手に入れましょう。SNSでおしゃれゴルファーの着こなしを参考にするのも良いでしょう。<br>
+          <%= link_to "GDOゴルフショップ (セールコーナー)", "https://shop.golfdigest.co.jp/outlet/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>こだわりのクラブがどんな球を打てるのか、弾道がしっかり確認できる屋外練習場でじっくり試しましょう。<br>
+          <%= link_to "青葉山ゴルフ練習場 (市内からのアクセス良好)", "https://aobayama-golf.com/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>クラブの性能と自分のファッションが映える、手入れの行き届いた少しきれいめなコースを選んでみましょう。<br>
+          <%= link_to "仙台ヒルズゴルフ倶楽部", "https://booking.pacificgolf.co.jp/guide/21.html", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["1", "1", "1", "2", "2"] %>
+    <h6>「ギア好き」アウトドア・ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    オープンな環境で練習し、クラブの性能や見た目にもこだわるタイプ。仲間と楽しくプレーしながらも、自分の選んだこだわりのギアでプレーすることに喜びを感じます。</p>
+    <p><b>今後の成長パス：</b><br>
+    練習場で色々なクラブを試打し、中古で名器を発掘。ギア談義で仲間とのコミュニケーションも深まります。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>中古クラブの在庫が豊富な専門店で、店員さんとギア談義をしながら掘り出し物を探すのが至福の時間です。<br>
+          <%= link_to "ゴルフパートナー 仙台泉バイパス店", "https://www.golfpartner.co.jp/538/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>見た目より動きやすさ。ワークマンのゴルフ向けパンツや、ユニクロの速乾性ポロシャツなど、高機能ウェアを賢く選びましょう。<br>
+          <%= link_to "ワークマン (ゴルフ向けウェア)", "https://workman.jp/shop/e/ew-golf/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>打席数が多い大規模な練習場なら、他のゴルファーがどんなクラブを使っているか観察するのも楽しみの一つです。<br>
+          <%= link_to "泉パークタウンゴルフ練習場", "https://ipgr.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>アップダウンがあり、色々なクラブを試せる戦略的なコースで、自分のギアの性能を最大限に引き出しましょう。<br>
+          <%= link_to "グレート仙台カントリー倶楽部", "https://booking.pacificgolf.co.jp/guide/19.html", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+    
+  <% when ["1", "1", "2", "1", "1"] %>
+    <h6>「隠れ家でおしゃれに」スマート・ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    人目を気にせず自分のペースで練習し、コースではさりげないおしゃれを楽しみたいタイプ。賢く費用を抑えながら、自分らしいスタイルを確立していきます。</p>
+    <p><b>今後の成長パス：</b><br>
+    個室で集中練習してスイングを固め、おしゃれなゴルフウェアで自信を持ってコースデビュー。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>大型量販店で新品のスターターセットを見るのも良いですが、まずは中古ショップで専門スタッフに相談するのが賢い選択です。<br>
+          <%= link_to "ゴルフパートナー 仙台泉バイパス店", "https://www.golfpartner.co.jp/538/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>ユニクロのきれいめポロシャツやパンツは、ゴルフウェアとしても優秀（特に感動パンツ）。アウトレットでブランド品を1点投入するのもおすすめです。<br>
+          <%= link_to "ユニクロ (オンラインストア)", "https://www.uniqlo.com/jp/ja/", target: "_blank", rel: "noopener" %><br>
+          <%= link_to "仙台泉プレミアム・アウトレット", "https://www.premiumoutlets.co.jp/sendaiizumi/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>周りの目を気にせず、自分のスイング作りに集中できるインドア練習場がベスト。納得いくまで何度も同じ練習ができます。<br>
+          <%= link_to "REN GOLF仙台南", "https://ren.golf/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>デビュー戦は緊張するもの。OBが少なく、前の組を気にせず回れるような、比較的空いている平日や午後スループレーを狙いましょう。<br>
+          <%= link_to "松島国際カントリークラブ", "https://matsushima-kokusai-cc.co.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["1", "1", "2", "1", "2"] %>
+    <h6>「仲間とこっそり」高機能スタイル・ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    気心の知れた仲間とプライベートな空間で楽しみながら、機能的なウェアで快適にプレーしたいタイプ。コスパを重視しつつも、快適性は譲れません。</p>
+    <p><b>今後の成長パス：</b><br>
+    個室練習場で基礎を固め、仲間と易しいコースでデビュー。慣れてきたら中級コースにチャレンジ。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>新品の初心者セットならゴルフ５が品揃え豊富。的確なアドバイスで、あなたに合う「優しい」クラブを見つけてくれます。<br>
+          <%= link_to "ゴルフ５ 仙台泉店", "https://store.alpen-group.jp/Form/RealShop/ShopDetail.aspx?rsid=0658&srsltid=AfmBOoocr-xEcOx6C4dAFlINTFIAd0D8v2a5mYMac8KKklIRCQU5-w_W", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>ゴルフは意外と汗をかくスポーツ。ワークマンやユニクロのスポーツウェアラインで、吸湿速乾性の高いものを選びましょう。<br>
+          <%= link_to "ワークマン (公式オンラインストア)", "https://workman.jp/shop/default.aspx", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>仲間と一緒に行けるインドア練習場がおすすめ。周りを気にせず、教え合いながら楽しく上達できます。<br>
+          <%= link_to "REN GOLF仙台泉", "https://ren.golf/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>手頃な価格で楽しめるパブリックコースで、仲間とのラウンドデビューを飾りましょう。スコアよりも楽しむことが目的です。<br>
+          <%= link_to "杜の公園ゴルフクラブ", "https://www.mori-golf.co.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["1", "1", "2", "2", "1"] %>
+    <h6>「こだわりを秘めた」おしゃれ倹約家</h6>
+    <p>あなたのタイプ：<br>
+    自分だけのこだわりを大切にし、個室での練習を好む一方、コースではファッションも楽しみたいタイプ。限られた予算の中で、最高のおしゃれとパフォーマンスを追求します。</p>
+    <p><b>今後の成長パス：</b><br>
+    セール品で高品質なウェアを揃え、型落ちクラブで実力を磨く。コスパと品質のバランスを極めます。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>中古ショップで、少し前のモデルの中上級者向けアイアンなどを探してみましょう。デザインの良い「型落ち」はお買い得です。<br>
+          <%= link_to "ゴルフパートナー 仙台泉バイパス店", "https://www.golfpartner.co.jp/538/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>GDOなどのオンラインショップのセールは必見。最大70%OFFなど、驚きの価格でブランドウェアが手に入ります。<br>
+          <%= link_to "GDOゴルフショップ (セール)", "https://shop.golfdigest.co.jp/outlet", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>インドア練習場で、自分のこだわりのクラブをじっくりと打ち込みましょう。スイングデータを分析できる施設がおすすめです。<br>
+          <%= link_to "REN GOLF仙台南", "https://ren.golf/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>こだわりのウェアとクラブが映える、少し戦略的で景色の良いコースを選んでモチベーションを上げましょう。<br>
+          <%= link_to "仙台ヒルズゴルフ倶楽部", "https://booking.pacificgolf.co.jp/guide/21.html", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["1", "1", "2", "2", "2"] %>
+    <h6>「見た目も大事」コスパ・ギアマニア</h6>
+    <p>あなたのタイプ：<br>
+    仲間と楽しみつつも、クラブの見た目や性能にはこだわりたいタイプ。費用は抑えたいけれど、所有する喜びも感じたい気持ちを大切にします。</p>
+    <p><b>今後の成長パス：</b><br>
+    中古で掘り出し物のクラブを見つけて、個室でじっくり練習。ギアへの愛着も上達のモチベーションに。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>憧れのブランドの3〜5年前のモデルを中古で探すのが王道。驚くほど安く、性能も十分なクラブが見つかります。<br>
+          <%= link_to "ゴルフパートナー 仙台泉バイパス店", "https://www.golfpartner.co.jp/538/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>ウェアにお金をかけるより、その分をクラブや練習代に。機能性を追求し、ワークマンで全身揃えるのも一つのスタイルです。<br>
+          <%= link_to "ワークマン (ゴルフ向けウェア)", "https://workman.jp/shop/e/ew-golf/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>こだわりのクラブの性能を最大限引き出すため、弾道測定器が完備されたインドア練習場で科学的に練習しましょう。<br>
+          <%= link_to "REN GOLF仙台南", "https://ren.golf/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>クラブセッティングを色々試せる、変化に富んだレイアウトのコースでギアの性能を確かめましょう。<br>
+          <%= link_to "グレート仙台カントリー倶楽部", "https://booking.pacificgolf.co.jp/guide/19.html", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["1", "2", "1", "1", "1"] %>
+    <h6>「着飾るストイック」ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    練習はオープンな場で自分を律し、コースではおしゃれをして気分を上げるタイプ。ストイックさと遊び心のバランスを取りながら、賢く上達を目指します。</p>
+    <p><b>今後の成長パス：</b><br>
+    打ちっぱなしで基本をマスターし、おしゃれなウェアでモチベーション維持。楽しみながら確実に上達。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>上達を目指すなら、最初はとにかく優しいクラブが一番。見栄を張らず、初心者向けセットで基本を固めましょう。<br>
+          <%= link_to "ゴルフ５ 仙台泉店", "https://store.alpen-group.jp/golf5/shop_search/detail.php?shopid=2403", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>ユニクロのシンプルでおしゃれなウェアは、練習場でもコースでも好印象。機能性も高く、コスパは抜群です。<br>
+          <%= link_to "ユニクロ (オンラインストア)", "https://www.uniqlo.com/jp/ja/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>打ち放題のある練習場で、とにかく多くの球を打ちましょう。反復練習が上達への一番の近道です。<br>
+          <%= link_to "杜の都ゴルフサロン仙台", "https://mmgc.jp/sendai.html", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>レッスン・コース：</b>ある程度打てるようになったら、ワンポイントレッスンを受けてみましょう。その後、実践の場としてコースへ。<br>
+          <%= link_to "泉パークタウンゴルフ練習場 (スクールあり)", "https://www.izumiparktown-golf.co.jp/school", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["1", "2", "1", "1", "2"] %>
+    <h6>「公言実行」トレーニング・ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    オープンな場で自分を追い込み、機能的なウェアでひたすら練習に打ち込むタイプ。易しいクラブで着実に、そして効率的に上達することを目標としています。</p>
+    <p><b>今後の成長パス：</b><br>
+    打ち放題で量をこなし、基本を体に染み込ませる。公言した目標に向かって着実に前進。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>スコアを出すための「武器」として、最もミスに強い初心者向けクラブを選びましょう。見た目やブランドは二の次です。<br>
+          <%= link_to "ゴルフ５ 仙台泉店", "https://store.alpen-group.jp/golf5/shop_search/detail.php?shopid=2403", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>練習の邪魔にならない、シンプルで動きやすい服装がベスト。ワークマンのストレッチパンツはまさに理想的です。<br>
+          <%= link_to "ワークマン (公式オンラインストア)", "https://workman.jp/shop/default.aspx", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>「100切り」など具体的な目標を立て、達成するまで通い詰められる、コスパの良い打ちっぱなしを見つけましょう。<br>
+          <%= link_to "青葉山ゴルフ練習場", "https://aobayama-golf.com/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>練習の成果を試す場として、定期的に同じコースに通うと自分の成長が分かりやすいです。<br>
+          <%= link_to "杜の公園ゴルフクラブ (パブリック)", "https://www.mori-golf.co.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["1", "2", "1", "2", "1"] %>
+    <h6>「成り上がり志向」ハングリー・ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    オープンな場で実力を示し、いずれは憧れのブランドウェアとクラブでコースを闊歩したいという野心を持つタイプ。今はコストを抑え、虎視眈々と上達を狙っています。</p>
+    <p><b>今後の成長パス：</b><br>
+    中古の高性能クラブで実力を磨き、まずはスコアで結果を出す。将来の成功を夢見て努力を継続。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>今は我慢の時。中古ショップで実力派ゴルファーに人気の、少し前のモデル（アスリート向け）を探し出すのが面白いです。<br>
+          <%= link_to "ゴルフパートナー 仙台泉バイパス店", "https://www.golfpartner.co.jp/538/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>アウトレットやセールで、1〜2シーズン前のモデルなら憧れのブランドも手が届きます。賢く手に入れてモチベーションを上げましょう。<br>
+          <%= link_to "GDOゴルフショップ (アウトレット)", "https://shop.golfdigest.co.jp/outlet/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>上手い人が集まる練習場で、そのスイングを見て学ぶのも上達の秘訣。刺激を受けながら練習に励みましょう。<br>
+          <%= link_to "泉パークタウンゴルフ練習場", "https://ipgr.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>実力が試される、少し難易度の高いコースに挑戦し続けましょう。悔しさがあなたを強くします。<br>
+          <%= link_to "杜の都ゴルフ倶楽部", "https://mmgc.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+    
+  <% when ["1", "2", "1", "2", "2"] %>
+    <h6>「雑草魂」叩き上げゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    多くの人がいる練習場で腕を磨き、機能一筋のウェアで練習に没頭するタイプ。中古の高性能クラブを相棒に、叩き上げでのし上がっていくことに喜びを感じます。</p>
+    <p><b>今後の成長パス：</b><br>
+    中古クラブを使いこなし、打ちっぱなしで他の上手い人を参考に独学で上達。叩き上げの実力者を目指します。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>とにかく安くて高性能なクラブを探すなら中古ショップ一択。傷や年式は気にせず、自分の感覚に合う「相棒」を見つけましょう。<br>
+          <%= link_to "ゴルフパートナー 仙台泉バイパス店", "https://www.golfpartner.co.jp/538/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>ゴルフはスポーツ。装飾は不要。ワークマンで頭から足元まで、機能性ウェアで固めるのがあなたの戦闘服です。<br>
+          <%= link_to "ワークマン (ゴルフ向けウェア)", "https://workman.jp/shop/e/ew-golf/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>安さが正義。とにかく1球あたりの単価が安い練習場を探し、質より量でスイングを体に覚えさせましょう。<br>
+          <%= link_to "青葉山ゴルフ練習場", "https://aobayama-golf.com/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>河川敷コースなど、価格がリーズナブルなコースで実戦経験を積むのがおすすめです。見栄えより経験値を優先しましょう。<br>
+          <%= link_to "富谷パブリックコース", "https://golf-medley.com/golf_courses/171", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["1", "2", "2", "1", "1"] %>
+    <h6>「内に秘めた闘志」おしゃれ戦略家</h6>
+    <p>あなたのタイプ：<br>
+    個室で黙々と練習し、コースではおしゃれなウェアで冷静にプレーするタイプ。上達への強い意志を持ちつつ、コストを抑えて賢く目標を達成します。</p>
+    <p><b>今後の成長パス：</b><br>
+    個室で集中練習し、おしゃれなウェアでモチベーション維持。戦略的にスコアアップを目指します。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>最新モデルでなくても、評価の高い初心者向けセットを選びましょう。コストを抑え、余った予算はレッスン代へ。<br>
+          <%= link_to "ゴルフ５ 仙台泉店", "https://store.alpen-group.jp/golf5/shop_search/detail.php?shopid=2403", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>普段使いもできるユニクロのウェアは、賢いあなたの選択肢。シンプルだからこそ、着こなしのセンスが光ります。<br>
+          <%= link_to "ユニクロ (オンラインストア)", "https://www.uniqlo.com/jp/ja/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>スイング撮影やデータ分析ができるインドア練習場で、自分の課題を客観的に把握し、効率的に練習するのがあなたらしいスタイルです。<br>
+          <%= link_to "REN GOLF仙台南", "https://ren.golf/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース・レッスン：</b>インドアで得た課題を、実際のコースでどう克服するか。安いゴルフコースで確認しましょう<br>
+           <%= link_to "富谷パブリックコース", "https://golf-medley.com/golf_courses/171", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+    
+  <% when ["1", "2", "2", "1", "2"] %>
+    <h6>「静かに燃える」隠れ努力家</h6>
+    <p>あなたのタイプ：<br>
+    人知れず個室で練習を重ね、機能的なウェアでストイックに上達を目指すタイプ。今は易しいクラブで基礎を固め、いつか皆を驚かせたいと思っています。</p>
+    <p><b>今後の成長パス：</b><br>
+    個室で集中的に練習を重ね、レッスンで確実に上達。コストを抑えつつ着実にレベルアップ。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>とにかく今は、変な癖をつけずに基本を身につけることが最優先。最もオートマチックに打てる優しいクラブを選びましょう。<br>
+          <%= link_to "ゴルフ５ 仙台泉店", "https://store.alpen-group.jp/golf5/shop_search/detail.php?shopid=2403", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>練習に集中するため、ウェアは機能性一択。汗をかいても快適で、動きやすいワークマンのウェアが最適です。<br>
+          <%= link_to "ワークマン (公式オンラインストア)", "https://workman.jp/shop/default.aspx", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>月額制で通い放題のインドアゴルフスクールがおすすめ。毎日でも通って、誰よりも早く上達しましょう。<br>
+          <%= link_to "REN GOLF仙台南", "https://ren.golf/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>コースデビューはまだ早いかもしれません。まずはインドアのシミュレーションラウンドで、コースマネジメントの基礎を学びましょう。</li>
+      </ul>
+    </div>
+
+  <% when ["1", "2", "2", "2", "1"] %>
+    <h6>「秘めたる野心」おしゃれアスリート</h6>
+    <p>あなたのタイプ：<br>
+    個室での集中練習を好み、コースではファッションにもこだわることでモチベーションを上げるタイプ。費用を抑えつつ、上達への野心を静かに燃やしています。</p>
+    <p><b>今後の成長パス：</b><br>
+    アウトレットで高品質ウェアを揃え、個室で秘密の特訓。おしゃれと実力の両立を目指します。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>コストを抑えつつ性能を求めるなら、中古の「アスリートモデル」が狙い目。少し難しくても、使いこなすための練習があなたを成長させます。<br>
+          <%= link_to "ゴルフパートナー 仙台バイパス店", "https://www.golfpartner.co.jp/shop/241/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>アウトレットなら、通常は高価なアスリート向けブランドのウェアも手に入ります。機能的でスタイリッシュな一着を見つけましょう。<br>
+          <%= link_to "仙台泉プレミアム・アウトレット", "https://www.premiumoutlets.co.jp/sendaiizumi/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>弾道データやスイング映像を細かく分析できるインドア施設で、自分のゴルフを徹底的に研究しましょう。<br>
+          <%= link_to "REN GOLF仙台南", "https://ren.golf/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>実力がついてきたら、競技ゴルファーも利用するような戦略的なコースに挑戦。おしゃれなウェアで、静かに闘志を燃やしましょう。<br>
+          <%= link_to "杜の都ゴルフ倶楽部", "https://mmgc.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["1", "2", "2", "2", "2"] %>
+    <h6>「コスパ最強」理論派ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    限られた予算で最高のパフォーマンスを追求する理論派。個室でデータを分析しながら練習し、機能的なウェアとこだわりのクラブでスコアアップを目指します。</p>
+    <p><b>今後の成長パス：</b><br>
+    中古で高性能クラブを発掘し、データ分析で効率的に上達。理論と実践の両輪で確実にスコアアップ。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>ネットのレビューやスペックを徹底的に調べ、中古ショップで「コスパ最強」と名高いクラブを探し出すのがあなたのスタイルです。<br>
+          <%= link_to "ゴルフパートナー 仙台泉バイパス店", "https://www.golfpartner.co.jp/538/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>ブランドやデザインは関係ありません。ストレッチ性、速乾性、UVカットなど、機能のスペックだけでウェアを選びましょう。<br>
+          <%= link_to "ワークマン (機能性で選ぶ)", "https://workman.jp/shop/default.aspx", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>あなたの練習は、もはや研究です。最新のシミュレーターが導入されているインドア練習場で、データを収集・分析しましょう。<br>
+          <%= link_to "Lounge Range 仙台 (最新シミュレータ)", "https://lounge-range-sendai.com/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>コースのヤーデージやハザード配置を事前に頭に入れ、データを元にマネジメントを組み立てる。そんな戦略的なゴルフを楽しみましょう。<br>
+          <%= link_to "グレート仙台カントリー倶楽部", "https://booking.pacificgolf.co.jp/guide/19.html", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+    
+  <% when ["2", "1", "1", "1", "1"] %>
+    <h6>「優雅におしゃれを楽しむ」サロン・ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    高級な個室練習場で静かに練習し、コースではハイブランドのウェアでファッションを楽しむタイプ。ゴルフをスポーツとしてだけでなく、上質な社交場として捉えています。</p>
+    <p><b>今後の成長パス：</b><br>
+    サロンのような個室で優雅に練習し、ハイブランドウェアでコースを社交場として楽しむ。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>性能はもちろん、見た目の美しさも重要。所有する喜びを感じられる、海外の高級ブランドの優しいモデルがおすすめです。<br>
+          <%= link_to "PGA TOUR SUPERSTORE SENDAI IZUMICHUO", "https://www.supersports.co.jp/pgatour-superstore/store-sendai-izumichuo/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>デパートのゴルフウェア売り場や、路面店で最新のコレクションをチェック。トータルコーディネートを楽しみましょう。<br>
+          <%= link_to "PEARLY GATES (公式ストア)", "https://store.tsigs.com/pearlygates/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>練習も優雅な時間。完全個室で、ドリンクサービスなどもあるワンランク上のインドア施設を選びましょう。<br>
+          <%= link_to "Lounge Range 仙台", "https://lounge-range-sendai.com/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>クラブハウスが豪華で、食事が美味しいと評判の名門コースへ。プレーだけでなく、一日を通してリッチな時間を過ごせます。<br>
+          <%= link_to "仙台クラシックゴルフ倶楽部", "https://www.sendaiclassicgc.com/", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["2", "1", "1", "1", "2"] %>
+    <h6>「上質な快適さ」プライベート・ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    質の高いプライベート空間で練習し、機能性を追求した高級ウェアで快適なプレーを望むタイプ。易しいクラブで、最高にリラックスした時間を楽しみます。</p>
+    <p><b>今後の成長パス：</b><br>
+    綺麗な個室練習場で質の高い練習を重ね、高機能ウェアで快適にプレー。上質な環境でゴルフを堪能。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>価格は気にせず、とにかくリラックスして打てる、最新技術が詰まったトップブランドの易しいモデルを選びましょう。<br>
+          <%= link_to "PGA TOUR SUPERSTORE SENDAI IZUMICHUO", "https://www.supersports.co.jp/pgatour-superstore/store-sendai-izumichuo/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>トップアスリートも愛用する、機能性に優れた高級ブランドのウェアが最適。最高の着心地が、あなたのプレーをサポートします。<br>
+          <%= link_to "デサントゴルフ (公式ストア)", "https://store.descente.co.jp/descentegolf/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>空調の効いた静かな個室で、快適に練習するのが一番。最新シミュレーターで、リラックスしながらも効率的に上達できます。<br>
+          <%= link_to "Lounge Range 仙台", "https://lounge-range-sendai.com/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>メンテナンスが行き届き、リゾートのような雰囲気を持つコースがおすすめ。喧騒を忘れ、ゴルフだけに集中できます。<br>
+          <%= link_to "仙台クラシックゴルフ倶楽部", "https://www.sendaiclassicgc.com/", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+    
+  <% when ["2", "1", "1", "2", "1"] %>
+    <h6>「こだわりを纏う」エグゼクティブ・ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    ファッションもギアも、自分のスタイルを貫きたいタイプ。妥協せず選んだこだわりのクラブとウェアで、仲間とのプレーを優雅に楽しみます。</p>
+    <p><b>今後の成長パス：</b><br>
+    憧れのブランドで統一し、個室で納得いくまで練習。エグゼクティブとして恥ずかしくないスタイルを確立。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>あなたのステータスを象徴する、誰もが憧れるトップブランドのクラブで揃えましょう。フィッティングを受けて、完璧な一本を。<br>
+          <%= link_to "PGA TOUR SUPERSTORE SENDAI IZUMICHUO (フィッティング推奨)", "https://www.supersports.co.jp/pgatour-superstore/store-sendai-izumichuo/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>海外の高級ゴルフブランドや、国内のトップブランドで、洗練された大人のゴルフスタイルを演出しましょう。<br>
+          <%= link_to "MASTER BUNNY EDITION (公式ストア)", "https://store.tsigs.com/masterbunnyedition/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>練習する姿もスタイリッシュに。デザイン性の高い、上質なプライベート空間で納得いくまで調整を重ねます。<br>
+          <%= link_to "Lounge Range 仙台", "https://lounge-range-sendai.com/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>メンバーシップの名門コースで、ビジネス仲間や友人とプレーするのがあなたのスタイル。社会的地位にふさわしい場所を選びましょう。<br>
+          <%= link_to "グレースリッジカントリークラブ", "https://booking.pacificgolf.co.jp/guide/24.html", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["2", "1", "1", "2", "2"] %>
+    <h6>「最高のギアと快適さ」追求ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    最高のギアをプライベートな空間でじっくり試したいタイプ。価格は厭わず、自分が納得できるクラブと機能的なウェアで、こだわりのゴルフを楽しみます。</p>
+    <p><b>今後の成長パス：</b><br>
+    最新ギアを個室でじっくり試し、高機能ウェアで快適にプレー。こだわりのセッティングを追求。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>プロが使うような最新モデルを、専門のフィッターと共に選び抜きましょう。あなたの感性に合う最高の「武器」が見つかります。<br>
+          <%= link_to "PGA TOUR SUPERSTORE SENDAI IZUMICHUO (フィッティング推奨)", "https://www.supersports.co.jp/pgatour-superstore/store-sendai-izumichuo/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>雨や風にも負けない、全天候型の最高級機能性ウェアを。どんなコンディションでも快適なプレーを約束してくれます。<br>
+          <%= link_to "タイトリスト アパレル (公式)", "https://www.titleist.co.jp/apparel/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>最新の弾道測定器が設置された個室で、ギアの性能を数値で確認しながら、ミリ単位の調整を行いましょう。<br>
+          <%= link_to "Lounge Range 仙台", "https://lounge-range-sendai.com/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>クラブの性能を存分に試せる、戦略性の高いチャンピオンコースへ。自分の選択がスコアに直結する、スリリングなゴルフを楽しめます。<br>
+          <%= link_to "利府ゴルフ倶楽部", "https://www.pacificgolf.co.jp/rifu/", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["2", "1", "2", "1", "1"] %>
+    <h6>「太陽とファッション」愛好ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    太陽の下でプレーする楽しさと、ファッションをこよなく愛するタイプ。易しいクラブで気軽にプレーしながらも、その日のコーディネートを考えるのが一番の楽しみ。</p>
+    <p><b>今後の成長パス：</b><br>
+    開放的な練習場で練習し、毎回異なるファッションでコースを楽しむ。ゴルフファッションのトレンドセッター。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>性能も大事ですが、キャディバッグに入っているだけで気分が上がる、デザイン性の高いクラブを選びましょう。<br>
+          <%= link_to "PGA TOUR SUPERSTORE SENDAI IZUMICHUO", "https://www.supersports.co.jp/pgatour-superstore/store-sendai-izumichuo/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>インスタグラムで人気のブランドや、雑誌で特集されている最新のウェアをいち早くチェック。誰よりも目立つのがあなたのスタイルです。<br>
+          <%= link_to "vivid golf (セレクトショップ)", "https://vivid-golf.com/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>練習場もおしゃれな場所を選びたいもの。きれいで開放感のある練習場で、楽しくスイングしましょう。<br>
+          <%= link_to "泉パークタウンゴルフ練習場", "https://ipgr.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>写真映えする、景観の美しいコースがベスト。ランチがおしゃれで美味しいコースを選ぶのもポイントです。<br>
+          <%= link_to "仙台ヒルズゴルフ倶楽部", "https://booking.pacificgolf.co.jp/?p=guide.course_layout&cc_id=21", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["2", "1", "2", "1", "2"] %>
+    <h6>「アクティブ&リッチ」リゾート・ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    開放感あふれる練習場で気持ちよく汗を流し、機能的な高級ウェアで快適にプレーしたいタイプ。易しいクラブで、仲間とアクティブに最高の時間を過ごします。</p>
+    <p><b>今後の成長パス：</b><br>
+    広々とした練習場で開放的に練習し、リゾート感覚でゴルフを楽しむ。アクティブなゴルフライフを満喫。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>最新技術を搭載した、トップブランドの易しいモデルが最適。クラブに助けてもらいながら、リラックスしてゴルフを楽しみましょう。<br>
+          <%= link_to "PGA TOUR SUPERSTORE SENDAI IZUMICHUO", "https://www.supersports.co.jp/pgatour-superstore/store-sendai-izumichuo/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>高級ブランドの、動きやすさを追求した高機能ウェアを。上質な素材感が、リゾートゴルフの気分を盛り上げます。<br>
+          <%= link_to "デサントゴルフ (公式ストア)", "https://store.descente.co.jp/descentegolf/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>打席間のスペースが広く、天然芝のアプローチ練習場なども完備された、リゾートホテルのような練習場で優雅に練習しましょう。<br>
+          <%= link_to "泉パークタウンゴルフ練習場", "https://ipgr.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>リゾートコースや、温泉付きのゴルフ場でのプレーがおすすめ。ゴルフの後は、ゆっくりと疲れを癒しましょう。<br>
+          <%= link_to "仙台クラシックゴルフ倶楽部 (リゾート感)", "https://www.sendaiclassicgc.com/", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+    
+  <% when ["2", "1", "2", "2", "1"] %>
+    <h6>「トレンド最前線」ファッションリーダー</h6>
+    <p>あなたのタイプ：<br>
+    常にゴルフ界のトレンドを追いかけ、最新のギアとファッションで注目を集めたいタイプ。仲間と楽しみながらも、誰よりも輝いていたいと思っています。</p>
+    <p><b>今後の成長パス：</b><br>
+    常に最新トレンドをチェックし、SNSでも注目を集める。ゴルフ界のファッションリーダーを目指します。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>雑誌やネットで話題の、最新モデルをいち早く手に入れましょう。性能だけでなく、その話題性も重要です。<br>
+          <%= link_to "GDO (最新クラブ情報)", "https://shop.golfdigest.co.jp/newshop/f/f_lp_club-new-model", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>人気ブランドの最新コレクションで全身をコーディネート。あなたのファッションが、仲間うちのトレンドになります。<br>
+          <%= link_to "PEARLY GATES (公式ストア)", "https://store.tsigs.com/pearlygates/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>上手い人やおしゃれな人が集まる、話題の練習場へ。情報交換の場としても活用しましょう。<br>
+          <%= link_to "泉パークタウンゴルフ練習場", "https://ipgr.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>トーナメントが開催されたり、SNSでよく見かける「イケてる」コースへ。プレーするだけでステータスになります。<br>
+          <%= link_to "利府ゴルフ倶楽部", "https://www.pacificgolf.co.jp/rifu/", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["2", "1", "2", "2", "2"] %>
+    <h6>「ギアと機能」オープンマインド・ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    オープンな場所で様々な人のプレーを見ながら練習し、最新ギアの性能とトップブランドの機能性を追求するタイプ。仲間との会話もギア談義で盛り上がります。</p>
+    <p><b>今後の成長パス：</b><br>
+    大型練習場で他の上級者と交流し、最新ギアの情報交換。ギアマニアとしての知識も深めます。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>量販店の試打コーナーで、納得いくまで最新クラブを打ち比べましょう。データと自分の感覚を信じて、最高の相棒を見つけます。<br>
+          <%= link_to "ゴルフ５ 仙台泉店 (試打)", "https://store.alpen-group.jp/golf5/shop_search/detail.php?shopid=2403", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>デザインよりも、素材やカッティング技術に注目。トップブランドが誇る、最新の機能性ウェアを体感してください。<br>
+          <%= link_to "デサントゴルフ (公式ストア)", "https://store.descente.co.jp/descentegolf/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>様々なレベルのゴルファーが集まる大規模な練習場が最適。他の人のクラブセッティングを観察するのも勉強になります。<br>
+          <%= link_to "泉パークタウンゴルフ練習場", "https://ipgr.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>様々なライから打つことになる戦略的なコースで、クラブの総合的な性能を試しましょう。ギア好きにはたまりません。<br>
+          <%= link_to "グレート仙台カントリー倶楽部", "https://booking.pacificgolf.co.jp/guide/19.html", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+    
+  <% when ["2", "2", "1", "1", "1"] %>
+    <h6>「知性と感性」極めるゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    プライベートな空間で自分の感性を研ぎ澄まし、コースでは洗練されたファッションでプレーするタイプ。易しいクラブで自信をつけ、知的にスコアを組み立てます。</p>
+    <p><b>今後の成長パス：</b><br>
+    質の高い個室で感性を磨き、洗練されたスタイルでプレー。知性と美意識の両立を追求します。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>トップブランドが作る、美しさと優しさを兼ね備えたクラブがあなたにふさわしい。最高のテクノロジーがあなたの感性をサポートします。<br>
+          <%= link_to "PGA TOUR SUPERSTORE SENDAI IZUMICHUO", "https://www.supersports.co.jp/pgatour-superstore/store-sendai-izumichuo/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>シンプルながらも、カッティングや素材にこだわったハイセンスなウェアを選びましょう。あなたの知性を引き立てます。<br>
+          <%= link_to "MASTER BUNNY EDITION (公式ストア)", "https://store.tsigs.com/masterbunnyedition/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>静かなプライベート空間で、自分のスイングとじっくり向き合う時間が必要です。感覚を研ぎ澄ますことに集中しましょう。<br>
+          <%= link_to "Lounge Range 仙台", "https://lounge-range-sendai.com/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>レッスン・コース：</b>技術だけでなく、コースマネジメントやメンタル面を指導してくれるコーチを探しましょう。美しい名門コースで実践です。<br>
+          <%= link_to "グレースリッジカントリークラブ", "https://booking.pacificgolf.co.jp/guide/24.html", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["2", "2", "1", "1", "2"] %>
+    <h6>「完全装備」パーフェクト・ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    最新理論に基づいた個室レッスンで無駄なく練習し、最高の機能性ウェアと易しいクラブで完璧な基礎を築きたいタイプ。上達に妥協はありません。</p>
+    <p><b>今後の成長パス：</b><br>
+    最新設備と一流指導者のもとで科学的に上達。完璧な基礎から着実にレベルアップを目指します。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>あなたのスイングを完璧にサポートしてくれる、トップブランドの最も易しいモデルを選びましょう。クラブのせいにできない状況を作ります。<br>
+          <%= link_to "PGA TOUR SUPERSTORE SENDAI IZUMICHUO", "https://www.supersports.co.jp/pgatour-superstore/store-sendai-izumichuo/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>スイングの邪魔をしない、体の動きを計算しつくされた最高級の機能性ウェアを。パフォーマンスを最大限に引き出します。<br>
+          <%= link_to "デサントゴルフ (公式ストア)", "https://store.descente.co.jp/descentegolf/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場・レッスン：</b>最新シミュレーターが完備され、専属プロの指導が受けられるインドアスクールへ。科学的アプローチで最短の上達を目指します。<br>
+          <%= link_to "LOUNGE RANGE 仙台", "https://lounge-range-sendai.com/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>まずは基礎を固めるため、フラットで癖のないコースで練習の成果を確認しましょう。完璧なゴルフを目指す第一歩です。<br>
+          <%= link_to "松島国際カントリークラブ", "https://matsushima-kokusai-cc.co.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+    
+  <% when ["2", "2", "1", "2", "1"] %>
+    <h6>「勝利を纏う」モダン・アスリート</h6>
+    <p>あなたのタイプ：<br>
+    最新鋭のギアとファッションを身に纏い、勝利へのこだわりを体現するタイプ。個室で静かに闘志を燃やし、コースでは誰よりもスタイリッシュに結果を出します。</p>
+    <p><b>今後の成長パス：</b><br>
+    トップブランドで統一し、VIP個室で勝利への執念を磨く。ステータスとしてのゴルフを極めます。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>契約プロと同じ、トップブランドのアスリートモデルで揃えましょう。クラブがあなたに勝利への覚悟を問いかけます。<br>
+          <%= link_to "PGA TOUR SUPERSTORE SENDAI IZUMICHUO (フィッティング推奨)", "https://www.supersports.co.jp/pgatour-superstore/store-sendai-izumichuo/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>クラブと同じブランドの、ツアーモデルのウェアを纏いましょう。全身から放たれるオーラで、相手を圧倒します。<br>
+          <%= link_to "タイトリスト アパレル (公式)", "https://www.titleist.co.jp/apparel/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>誰にも見られず、静かに集中できる完全個室の練習場があなたの聖域。勝利のイメージトレーニングを重ねましょう。<br>
+          <%= link_to "Lounge Range 仙台", "https://lounge-range-sendai.com/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>戦いの舞台は、タフなセッティングのチャンピオンコース。数々の名勝負が生まれた場所で、あなたの伝説が始まります。<br>
+          <%= link_to "利府ゴルフ倶楽部", "https://www.pacificgolf.co.jp/rifu/", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["2", "2", "1", "2", "2"] %>
+    <h6>「理想を追求する」ラボラトリー・ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    個室練習場を自分の研究室（ラボ）と捉え、最高のギアと機能性ウェアでデータを分析しながら上達を目指すタイプ。まさにゴルフの科学者です。</p>
+    <p><b>今後の成長パス：</b><br>
+    個室を研究室として活用し、データ分析で科学的に上達。理論と実践を高次元で融合させます。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>あなたのスイングデータを元に、シャフトやヘッドを組み合わせる「カスタムフィッティング」は必須。究極の一本を創り上げましょう。<br>
+          <%= link_to "PGA TOUR SUPERSTORE SENDAI IZUMICHUO(フィッティング)", "https://www.supersports.co.jp/pgatour-superstore/store-sendai-izumichuo/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>人間工学に基づいて設計された、最新の機能性ウェアを選びましょう。1%でもパフォーマンスを上げるための投資です。<br>
+          <%= link_to "デサントゴルフ (公式ストア)", "https://store.descente.co.jp/descentegolf/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>高精度の弾道測定器は、あなたの研究室に不可欠な機材。スピン量や打ち出し角など、あらゆるデータを収集・分析します。<br>
+          <%= link_to "Lounge Range 仙台 (最新シミュレータ)", "https://lounge-range-sendai.com/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>研究の成果を発表する場として、戦略的なコースを選びましょう。データに基づいたマネジメントで、コースを攻略します。<br>
+          <%= link_to "グレースリッジカントリークラブ", "https://booking.pacificgolf.co.jp/guide/24.html", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+    
+  <% when ["2", "2", "2", "1", "1"] %>
+    <h6>「華のある実力者」ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    多くの人が集まる練習場でも注目を集め、コースでは華やかなファッションで実力を見せつけるタイプ。易しいクラブで自信をつけ、スター性を発揮します。</p>
+    <p><b>今後の成長パス：</b><br>
+    人気練習場で注目を集めながら腕を磨き、華やかなファッションでコースのスター的存在を目指します。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>美しいスイングは、易しいクラブから生まれます。デザイン性も高いトップブランドのクラブで、見る者を魅了しましょう。<br>
+          <%= link_to "PGA TOUR SUPERSTORE SENDAI IZUMICHUO", "https://www.supersports.co.jp/pgatour-superstore/store-sendai-izumichuo/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>あなたが着れば、それがトレンドになる。人気ブランドの最新作で、常に注目を集める存在でいましょう。<br>
+          <%= link_to "PEARLY GATES (公式ストア)", "https://store.tsigs.com/pearlygates/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>ギャラリーが多い、活気のある練習場があなたのステージ。華麗なスイングで、周りの視線を釘付けにしましょう。<br>
+          <%= link_to "泉パークタウンゴルフ練習場", "https://ipgr.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>クラブハウスが華やかで、SNSでも話題のコースへ。あなたのプレーとファッションが、コースをさらに輝かせます。<br>
+          <%= link_to "仙台ヒルズゴルフ倶楽部", "https://booking.pacificgolf.co.jp/?p=guide.course_layout&cc_id=21", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["2", "2", "2", "1", "2"] %>
+    <h6>「王道を往く」エリート・ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    名門練習場で練習を重ね、伝統的なゴルフブランドの機能的なウェアを好むタイプ。易しいクラブで美しいスイングの基礎を作り、王道の上達ルートを歩みます。</p>
+    <p><b>今後の成長パス：</b><br>
+    名門練習場で王道のレッスンを受け、伝統的なスタイルで確実に上達。正統派ゴルファーを目指します。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>長年にわたり多くのゴルファーに愛されてきた、信頼と実績のあるブランドの易しいモデルを選びましょう。それが王道です。<br>
+          <%= link_to "PGA TOUR SUPERSTORE SENDAI IZUMICHUO", "https://www.supersports.co.jp/pgatour-superstore/store-sendai-izumichuo/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>奇をてらわず、品質と歴史に裏打ちされた伝統的ブランドのウェアを。品格のあるスタイルが、あなたの信頼性を高めます。<br>
+          <%= link_to "タイトリスト アパレル (公式)", "https://www.titleist.co.jp/apparel/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場・レッスン：</b>歴史と実績のある練習場で、経験豊富なティーチングプロから指導を受けるのが上達への最短ルートです。<br>
+          <%= link_to "泉パークタウンゴルフ練習場 (スクール)", "https://ipgr.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>風格のある伝統的なコースで、ゴルフの歴史とマナーを学びましょう。正統派ゴルファーとしての品格が身につきます。<br>
+          <%= link_to "仙台クラシックゴルフ倶楽部", "https://www.sendaiclassicgc.com/", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+    
+  <% when ["2", "2", "2", "2", "1"] %>
+    <h6>「スタイルと実力」兼ね備えた支配者</h6>
+    <p>あなたのタイプ：<br>
+    実力はもちろん、ファッションにおいてもゴルフ界をリードしたいという強い意志を持つタイプ。最新・最高のギアとウェアで、コースの支配者となるでしょう。</p>
+    <p><b>今後の成長パス：</b><br>
+    最高のブランドでトータルコーディネートし、世界レベルの指導で実力を磨く。ゴルフ界のリーダー的存在を目指します。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>誰もが一度は憧れる、最高級ブランドでフルセットを。その存在感だけで、他を圧倒する力があります。<br>
+          <%= link_to "PXG (公式サイト)", "https://www.pxg.com/ja-jp", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>ゴルフウェアの常識を変えるような、前衛的で高級なブランドを選びましょう。あなたのスタイルが、新たなトレンドを創ります。<br>
+          <%= link_to "MASTER BUNNY EDITION (公式ストア)", "https://store.tsigs.com/masterbunnyedition/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>あなたの練習を見せること自体が、一つのエンターテイメント。話題の練習場で、その圧倒的な実力とスタイルを見せつけましょう。<br>
+          <%= link_to "泉パークタウンゴルフ練習場", "https://ipgr.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>国内外のVIPが集う、最高級の名門コースがあなたの舞台。実力とスタイルで、そのコースの新たな歴史に名を刻みます。<br>
+          <%= link_to "グレースリッジカントリークラブ", "https://booking.pacificgolf.co.jp/guide/24.html", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+
+  <% when ["2", "2", "2", "2", "2"] %>
+    <h6>「至高を目指す」トップアマ・ゴルファー</h6>
+    <p>あなたのタイプ：<br>
+    最高の環境で最高のギアを使い、機能性を極めたウェアで、アマチュアの頂点を目指すタイプ。あなたのゴルフには一切の妥協がありません。</p>
+    <p><b>今後の成長パス：</b><br>
+    プロと同等の環境で腕を磨き、競技会での勝利を目指す。アマチュア界の頂点を見据えた本格的な取り組み。</p>
+    <div class="recommendations">
+      <p><b>おすすめのアクションプラン</b></p>
+      <ul>
+        <li><b>クラブ：</b>ツアープロが信頼を寄せる工房や、メーカーのツアーバンで、あなたのスイングに完璧に合わせたクラブを組み上げましょう。<br>
+          <%= link_to "PGA TOUR SUPERSTORE SENDAI IZUMICHUO", "https://www.supersports.co.jp/pgatour-superstore/store-sendai-izumichuo/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>ウェア：</b>ミリ単位の動きやすさや、体温調節機能など、勝利のために考え抜かれたプロ仕様のウェアが、あなたのパフォーマンスを支えます。<br>
+          <%= link_to "デサントゴルフ (公式ストア)", "https://store.descente.co.jp/descentegolf/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>練習場：</b>プロゴルファーも調整に訪れるような、質の高い練習環境が必須。天然芝の打席や、多様なアプローチ練習施設がある場所を選びましょう。<br>
+          <%= link_to "泉パークタウンゴルフ練習場", "https://ipgr.jp/", target: "_blank", rel: "noopener" %>
+        </li>
+        <li><b>コース：</b>アマチュア競技の決勝も行われるような、県内屈指のチャンピオンコースで、常に試合を意識したプレーを心がけましょう。<br>
+          <%= link_to "利府ゴルフ倶楽部", "https://www.pacificgolf.co.jp/rifu/", target: "_blank", rel: "noopener" %>
+        </li>
+      </ul>
+    </div>
+  <% else %>
+    <h6>診断エラー</h6>
+    <p>申し訳ありません、診断結果の取得に失敗しました。お手数ですが、もう一度最初から診断をやり直してください。</p>
+    <%= link_to "診断をやり直す", new_diagnosis_path, class: "link" %>
+
+ <% end %> 
+
+  <hr>
+
+  <div class="common-links">
+    <p><b>▼あなたへのおすすめリンク▼</b></p>
+    <%= link_to "宮城県のゴルフ関連マップで場所を確認する", map_path, class: "map-link" %><br>
+    <%= link_to "GDO(ゴルフダイジェスト・オンライン)で総合情報をチェック", "https://www.golfdigest.co.jp/", class: "shop-link", target: "_blank", rel: "noopener" %>
+  </div>
+</div>

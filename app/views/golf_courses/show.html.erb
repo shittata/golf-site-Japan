@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @golf_course %>
+
+<div>
+  <%= link_to "Edit this golf course", edit_golf_course_path(@golf_course) %> |
+  <%= link_to "Back to golf courses", golf_courses_path %>
+
+  <%= button_to "Destroy this golf course", @golf_course, method: :delete %>
+</div>

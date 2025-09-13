@@ -1,0 +1,33 @@
+<header>
+ <%= link_to "診断を始める", map_index_path, class: "link" %>
+    <h1>宮城県のゴルフ場ランキング</h1>
+</header>
+<main>
+<div class="tab-buttons">
+        <button class="tab-button active" onclick="showRanking('meimon')">名門コース</button>
+        <button class="tab-button" onclick="showRanking('kakuyasu')">格安コース</button>
+        <button class="tab-button" onclick="showRanking('nando_hard')">難コース</button>
+        <button class="tab-button" onclick="showRanking('nando_easy')">易コース</button>
+    </div>
+    <div class="ranking-contents">
+        <div id="meimon" class="ranking-container active">
+            <h2>👑 名門コース</h2>
+            <%= render 'course_table', courses: @meimon_courses %>
+        </div>    
+        <div id="kakuyasu" class="ranking-container">
+            <h2>💰 格安コース</h2>
+            <%= render 'course_table', courses: @kakuyasu_courses %>
+        </div>
+        <div id="nando_hard" class="ranking-container">
+            <h2>👹 難コース</h2>
+            <%= render 'course_table', courses: @nando_hard_courses %>
+        </div>
+        <div id="nando_easy" class="ranking-container">
+            <h2>😇 易コース (初心者向け)</h2>
+            <%= render 'course_table', courses: @nando_easy_courses %>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>&copy; 2025 宮城ゴルフランキング</p>
+</footer>

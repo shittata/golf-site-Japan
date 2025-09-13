@@ -1,0 +1,12 @@
+<% content_for :title, "Editing golf course" %>
+
+<h1>Editing golf course</h1>
+
+<%= render "form", golf_course: @golf_course %>
+
+<br>
+
+<div>
+  <%= link_to "Show this golf course", @golf_course %> |
+  <%= link_to "Back to golf courses", golf_courses_path %>
+</div>

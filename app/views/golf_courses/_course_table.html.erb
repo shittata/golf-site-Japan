@@ -1,0 +1,13 @@
+<table>
+    <thead><tr><th>画像</th><th>ゴルフ場名</th><th>エリア</th><th>特徴</th></tr></thead>
+    <tbody>
+        <% courses.each do |golf_course| %>
+            <tr>
+                <td class="image-cell"><%= image_tag golf_course.image_url, alt: "#{golf_course.name}の画像" %></td>
+                <td class="name"><a href="<%= golf_course.official_url %>" target="_blank" rel="noopener noreferrer"><%= golf_course.name %></a></td>
+                <td class="area"><%= golf_course.area %></td>
+                <td class="description"><%= golf_course.description %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

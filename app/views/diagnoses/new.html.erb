@@ -1,0 +1,53 @@
+<%= form_with(model: @diagnosis, local: true) do |f| %>
+    <div class="golf-container">
+        <div class="col-12">
+            <p>Q1. 価格について</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question1, "1", id: "custom_id1" %>
+            <label for="custom_id1">手頃な価格で済ませたい</label>
+            <%= f.radio_button :question1, "2", id: "custom_id2" %>
+            <label for="custom_id2">価格は2の次だ</label>
+        </div>
+        <div class="col-12">
+            <p>Q2. ゴルフプレー志向に関して</p>
+        </div> 
+        <div class="col-6">
+            <%= f.radio_button :question2, "1", id: "custom_id3" %>
+            <label for="custom_id3">友達や同僚と楽しくゴルフをしたい</label>
+            <%= f.radio_button :question2, "2", id: "custom_id4" %>
+            <label for="custom_id4">本格的に上達してプレーしたい</label>
+        </div>   
+        <div class="col-12">
+            <p>Q3. 練習形態について</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question3, "1", id: "custom_id5" %>
+            <label for="custom_id5">オープンな状況でやりたい</label>
+            <%= f.radio_button :question3, "2", id: "custom_id6" %>
+            <label for="custom_id6">クローズな状況でやりたい</label>
+        </div>
+    
+        <div class="col-12">
+            <p>Q4. ゴルフセットの性能について</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question4, "1", id: "custom_id7" %>
+            <label for="custom_id7">できるだけ易しめのクラブがいい</label>
+            <%= f.radio_button :question4, "2", id: "custom_id8" %>
+            <label for="custom_id8">見た目重視や中級者、上級者用でも大丈夫</label>
+        </div>
+        <div class="col-12">
+            <p>Q5. 装飾について</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question5, "1", id: "custom_id7" %>
+            <label for="custom_id7">おしゃれ重視だ</label>
+            <%= f.radio_button :question5, "2", id: "custom_id8" %>
+            <label for="custom_id8">機能性重視だ</label>
+        </div>        
+    </div>
+    <div class="sindanbotan">
+        <%= f.submit " 結果 " %>
+    </div>
+<% end %>
