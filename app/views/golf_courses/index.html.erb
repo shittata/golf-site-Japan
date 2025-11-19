@@ -5,7 +5,7 @@
 <main>
 <div class="tab-buttons">
         <button class="tab-button active" onclick="showRanking('meimon')">名門コース</button>
-        <button class="tab-button" onclick="showRanking('kakuyasu')">格安コース</button>
+        <button class="tab-button " onclick="showRanking('kakuyasu')">格安コース</button>
         <button class="tab-button" onclick="showRanking('nando_hard')">難コース</button>
         <button class="tab-button" onclick="showRanking('nando_easy')">易コース</button>
     </div>
@@ -31,3 +31,39 @@
 <footer>
     <p>&copy; 2025 宮城ゴルフランキング</p>
 </footer>
+<script>
+  // 関数をグローバル（window）に定義して、どこからでも呼べるようにする
+  window.showRanking = function(rankingId, element) {
+    console.log("クリックされました: " + rankingId); // ★確認用ログ
+
+    // 1. すべてのボタンから 'active' を外す
+    const buttons = document.querySelectorAll('.tab-button');
+    buttons.forEach(btn => {
+      btn.classList.remove('active');
+    });
+
+    // 2. すべてのコンテナを隠す（'active'を外す）
+    const containers = document.querySelectorAll('.ranking-container');
+    containers.forEach(container => {
+      container.classList.remove('active');
+    });
+
+    // 3. クリックされたボタンを光らせる（activeにする）
+    // 引数 element (this) があればそれを使い、なければ onclickの中身から探す
+    if (element) {
+      element.classList.add('active');
+    } else {
+      // HTML側の onclick="showRanking('xxx')" からボタンを探す（予備処理）
+      const targetBtn = document.querySelector(`button[onclick*="${rankingId}"]`);
+      if (targetBtn) targetBtn.classList.add('active');
+    }
+
+    // 4. 指定されたランキングを表示する
+    const targetContainer = document.getElementById(rankingId);
+    if (targetContainer) {
+      targetContainer.classList.add('active');
+    } else {
+      console.error("IDが見つかりません: " + rankingId);
+    }
+  };
+</script>

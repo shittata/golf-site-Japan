@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+/* ヘッダー（サイト名・概要） */
+.top-page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* 3つのパネルを囲むコンテナ */
+.top-menu-container {
+  display: flex; /* パネルを横並びにする */
+  justify-content: space-around; /* パネル間のスペースを均等に */
+  flex-wrap: wrap; /* 画面が狭いときは折り返す */
+  gap: 20px;
+}
+
+/* リンクの下線を消す */
+.menu-panel-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 各パネルのデザイン */
+.menu-panel {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px; /* 角を丸くする */
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 薄い影 */
+  transition: transform 0.2s, box-shadow 0.2s; /* アニメーション */
+}
+
+/* パネルにカーソルを合わせたときの動き */
+.menu-panel:hover {
+  transform: translateY(-5px); /* 少し上に浮き上がる */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}

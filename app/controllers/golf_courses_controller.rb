@@ -68,6 +68,6 @@ class GolfCoursesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def golf_course_params
-      params.require(:golf_course).permit(:name, :area, :description, :image_url, :official_url)
+      params.require(:golf_course).permit(:name, :area, :description, :image_url, :official_url, :tags)
     end
 end

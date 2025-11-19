@@ -21,3 +21,4 @@ function showRanking(rankingId) {
         container.classList.add('active');
     }
 }
+window.showRanking = showRanking;

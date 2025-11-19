@@ -1,0 +1,31 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<%# サイト名と概要 %>
+<header class="top-page-header">
+  <h1>あなたのゴルフパートナー</h1>
+  <p>あなたのプレースタイルを診断し、宮城県のおすすめゴルフコース情報を提供するサイトです。</p>
+</header>
+
+<%# 3つの機能へのリンクパネル %>
+<div class="top-menu-container">
+  <%= link_to diagnoses_path, class: "menu-panel-link" do %>
+    <div class="menu-panel">
+      <h2>ゴルファー診断はこちら</h2>
+      <p>あなたのプレースタイルや改善点を診断します。</p>
+    </div>
+  <% end %>
+
+  <%= link_to golf_courses_path, class: "menu-panel-link" do %>
+    <div class="menu-panel">
+      <h2>ゴルフ場ランキングはこちら</h2>
+      <p>宮城県内のゴルフコースをランキング形式で紹介します。</p>
+    </div>
+  <% end %>
+
+  <%= link_to map_path, class: "menu-panel-link" do %>
+    <div class="menu-panel">
+      <h2>宮城ゴルフ関連マップはこちら</h2>
+      <p>ゴルフコースや練習場の場所を地図で確認できます。</p>
+    </div>
+  <% end %>
+</div>

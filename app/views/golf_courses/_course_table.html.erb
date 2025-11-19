@@ -4,9 +4,20 @@
         <% courses.each do |golf_course| %>
             <tr>
                 <td class="image-cell"><%= image_tag golf_course.image_url, alt: "#{golf_course.name}の画像" %></td>
-                <td class="name"><a href="<%= golf_course.official_url %>" target="_blank" rel="noopener noreferrer"><%= golf_course.name %></a></td>
+                <td class="name">
+                 <% if golf_course.official_url.present? %>
+                  <a href="<%= golf_course.official_url %>" target="_blank" rel="noopener noreferrer">
+                   <%= golf_course.name %>
+                  </a>
+                 <% else %>
+                  <%= golf_course.name %>
+                 <% end %>
+                </td>
                 <td class="area"><%= golf_course.area %></td>
                 <td class="description"><%= golf_course.description %></td>
+                <td>
+                  <%= link_to "", edit_golf_course_path(golf_course) %>
+                </td>
             </tr>
         <% end %>
     </tbody>

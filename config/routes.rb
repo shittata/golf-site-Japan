@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "home/index"
   resources :golf_courses
   get "map/index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -15,6 +16,6 @@ Rails.application.routes.draw do
   # root "posts#index"
   resources :diagnoses
   get 'map', to: 'map#index'
-  root 'golf_courses#index'  #今後変更可能、トップページの仕様
+  root 'home#index'  #今後変更可能、トップページの仕様
   resources :golf_courses  
 end
