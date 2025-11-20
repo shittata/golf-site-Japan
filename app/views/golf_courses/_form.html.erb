@@ -2,7 +2,6 @@
   <% if golf_course.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(golf_course.errors.count, "error") %> prohibited this golf_course from being saved:</h2>
-
       <ul>
         <% golf_course.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -11,32 +10,36 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
+  <div style="margin-bottom: 10px;">
+    <%= form.label :name, "ゴルフ場名", style: "display: block" %>
     <%= form.text_field :name %>
   </div>
 
-  <div>
-    <%= form.label :area, style: "display: block" %>
+  <div style="margin-bottom: 10px;">
+    <%= form.label :area, "エリア", style: "display: block" %>
     <%= form.text_field :area %>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
+  <div style="margin-bottom: 10px;">
+    <%= form.label :description, "特徴", style: "display: block" %>
     <%= form.text_area :description %>
   </div>
 
-  <div>
-    <%= form.label :image_url, style: "display: block" %>
+  <div style="margin-bottom: 10px;">
+    <%= form.label :image_url, "画像URL", style: "display: block" %>
     <%= form.text_field :image_url %>
   </div>
 
-  <div>
-    <%= form.label :official_url, style: "display: block" %>
+  <div style="margin-bottom: 10px;">
+    <%= form.label :official_url, "公式サイトURL", style: "display: block" %>
     <%= form.text_field :official_url %>
   </div>
 
+  <div style="margin-bottom: 20px; background-color: #fff3cd; padding: 10px; border-radius: 5px;">
+    <%= form.label :tags, "タグ (例: 名門, 格安)", style: "display: block; font-weight: bold;" %>
+    <%= form.text_field :tags, placeholder: "カンマ区切りで入力" %>
+  </div>
   <div>
-    <%= form.submit %>
+    <%= form.submit "保存する", style: "padding: 10px 20px; cursor: pointer;" %>
   </div>
 <% end %>
